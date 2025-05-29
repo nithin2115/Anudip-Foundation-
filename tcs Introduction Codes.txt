@@ -1,0 +1,277 @@
+#Positive or Negative number
+''' n=int(input())
+if n>0:
+  print("positive")
+elif n<0:
+  print("negative")
+else:
+  print("zero")'''
+
+# Even or Odd number
+'''a=int(input())
+if a%2==0:
+  print("even")
+else:
+  print("odd")'''
+
+# Find the Sum of First N Natural Numbers
+'''a=int(input())
+s=0
+for i in range(a+1):
+  s+=i
+print(s)  
+     other method'''
+'''a=int(input())
+print(sum(range(1,a+1)))'''
+
+# Sum of the Numbers in a Given Range
+'''a,b=map(int,input().split())
+s=0
+for i in range(a,b+1):
+  s+=i
+print(s)'''
+
+# Greatest of Two Numbers in Python
+'''a,b=map(int,input().split())
+if a>b:
+  print(a)
+else:
+  print(b)'''
+# Sum of Digits of a Number in Python
+'''a=input()
+s=0
+for i in a:
+  s+=int(i)
+print(s)'''
+# Greatest of Three Numbers in Python
+'''a,b,c=map(int,input().split())
+if a>b:
+  print(a)
+elif b>c:
+  print(b)
+else:
+  print(c)'''
+# Leap year or not
+'''a=int(input())
+if a%400==0 or (a%4==0 and a%100!=0):
+  print("leap")
+else:
+  print("not leap")'''
+# Prime Number Program in Python
+'''a=int(input())
+flag=0
+if a<2:
+  print("not prime")
+elif(a==2):
+  print("prime")
+else:
+  for i in range(2,a):
+    if a%i==0:
+      flag=1
+      break
+  if flag==1:
+    print("not prime")
+  else:
+    print("prime")'''
+# Python Program to Print Prime Numbers In a Given Range
+'''a,b=map(int,input().split())
+li=[]
+for i in range(a,b+1):
+  flag=0
+  if i<2:
+    continue
+  elif i==2:
+    li.append(str(i))
+  else:
+    for j in range(2,i):
+      if i%j==0:
+        flag=1
+        break
+    if flag==0:
+      li.append(str(i))
+print(" ".join(li))'''
+# Reverse a Number in Python
+'''a=int(input())
+t=a
+r=0
+while t>0:
+  rem=t%10
+  r=(r*10)+rem
+  t=t//10
+print(r)'''
+# Palindrome Number
+'''a=int(input())
+t=a
+r=0
+while t>0:
+  rem=t%10
+  r=(r*10)+rem
+  t=t//10
+if a==r:
+  print(a,"is Palindrome number")
+else:
+  print(a,"is not Palindrome number")'''
+# Armstrong Number 
+'''a=input()
+n=len(a)
+s=0
+for i in a:
+  s+=int(i)**n
+if s==int(a):
+  print(s)'''
+# Armstrong Number in a Given range
+'''a,b=map(int,input().split())
+for i in range(a,b+1):
+  s=0
+  c=str(i)
+  for j in c:
+    s+=int(j)**len(c)
+  if s==i:
+    print(s)'''
+# Fibonacci Series in Python
+'''a=int(input())
+b=0
+c=1
+s=[b,c]
+for i in range(2,a):
+  t=b+c
+  s.append(t)
+  b=c
+  c=t
+print(" ".join(map(str,s)))'''
+# Factorial of a Number in Python
+''''a=int(input())
+f=1
+if a<0:
+  print("not posssible")
+else:
+  for i in range(1,a+1):
+    f=f*i
+  print(f)'''
+  
+# Power number in Python
+'''a,b=map(int,input().split())
+o=1
+for i in range(b):
+  o=o*a
+print(o)'''
+# factors of a number
+'''a=int(input())
+li=[]
+for i in range(2,a):
+  if a%i==0:
+    li.append(i)
+print(" ".join(map(str,li)))'''
+# Python Program to Finding out the Prime Factors of a Number
+'''a=int(input())
+li=[]
+for i in range(2,a):
+  if a%i==0:
+    li.append(i)
+li1=[]
+for j in li:
+  
+  flag=0
+  if j<2:
+    continue
+  elif(j==2):
+    li1.append(j)
+  else:
+    for i in range(2,j):
+      if j%i==0:
+        flag=1
+        break
+    if flag==0:
+      li1.append(j)
+print(li1)'''
+  
+
+      
+
+# Strong Number Program
+'''a=int(input())
+s=0
+for i in str(a):
+  f=1
+  for j in range(1,int(i)+1):
+    f=f*j
+  s=s+f  
+if s==a:
+  print(a,"is a strong number")
+else:
+  print("no")'''
+  
+#Perfect Number Program
+'''a=int(input())
+s=0
+for i in range(1,a):
+  if a%i==0:
+    s=s+i
+if a==s:
+  print(a,"is perfect number")
+else:
+  print(a,"is not perfect number")'''
+
+# Square Number Program
+'''a=int(input())
+flag=0
+for i in range(1,a):
+  if i*i==a:
+    flag=1
+    break
+if flag==1:
+  print(a,"is a Square Number")
+else:
+  print(a,"is not a Square Number")'''
+
+# Automorphic Number Program
+'''a=int(input())
+c=a*a
+if str(a)==str(c)[-len(str(a)):]:
+  print(a,"is a Automorphic Number")
+else:
+  print(a,"is not Automorphic Number")'''
+  
+# Harshad Number Program
+'''a=int(input())
+t=str(a)
+s=0
+for i in t:
+  s=s+int(i)
+c=a//s
+print(c)'''
+
+# Abundant  Number Program
+'''a=int(input())
+s=0
+for i in range(1,a):
+  if a%i==0:
+    s=s+i
+if s>a:
+  print(a,"is a Abudant Number")
+else:
+  print(a,"is not abudant Number")'''
+  
+# Friendly Pair Program
+'''a,b=map(int,input().split(','))
+s=0
+s1=0
+for i in range(1,a):
+  if a%i==0:
+    s=s+i
+for j in range(1,b):
+  if b%j==0:
+    s1=s1+j
+c=a//s
+d=b//s1
+if c==d:
+  print(a,b,"is Friendly Pair")
+else:
+  print(a,b,"is not Friendly Pair")'''
+    
+    
+
+    
+
+
+

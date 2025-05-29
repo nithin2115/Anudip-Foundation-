@@ -1,0 +1,281 @@
+# HCF Program in Python
+'''a,b=map(int,input().split(','))
+num1=a
+num2=b
+while a!=b:
+  if a>b:
+    a=a-b
+  else:
+    b=b-a
+print("The",num1,"and",num2,"HCF is",a)'''
+
+# LCM Program in Python
+'''a,b=map(int,input().split(','))
+num1=a
+num2=b
+while a!=b:
+  if a>b:
+    a=a-b
+  else:
+    b=b-a
+lcm=(num1*num2)//a
+print("The",num1,"and",num2,"LCM is",lcm)'''
+
+# GCD Program in Python [HCF AND GCD CODE IS SAME]
+'''num1,num2=map(int,input().split(','))
+a = num1
+b = num2
+while num1 != num2:
+    if num1 > num2:
+        num1 -= num2
+    else:
+        num2 -= num1
+
+print("GCD of", a, "and", b, "is", num1)'''
+
+# Binary to Decimal Conversion Program in Python
+'''n=input()
+print(int(n,2))'''
+
+# Octal to Decimal Conversion Program in Python
+'''n=input()
+print(int(n,8))'''
+
+# HexaDecimal to Decimal Conversion Program in Python
+'''n=input()
+print(int(n,16))'''
+
+# Decimal to binary Conversion Program in Python
+'''n=int(input())
+c=bin(n)[2:]
+print(c)'''
+
+# Decimal to Octal Conversion Program in Python
+'''n=int(input())
+c=oct(n)[2:]
+print(c)'''
+
+# Decimal to HexaDecimal Conversion Program in python
+'''n=int(input())
+c=hex(n)[2:]
+print(c)'''
+
+# Binary to Octal conversion Program in python
+'''n=input()
+c=int(n,2)
+d=oct(c)[2:]
+print(c)
+print(d)'''
+
+# Octal to Binary conversion Program in python
+'''n=input()
+c=int(n,8)
+print(c)
+d=bin(c)[2:]
+print(d)'''
+
+# Quadrant in which give coordinate axis program in Python
+'''x, y = map(int, list(input("Insert the value for variable X and Y : ").split(" ")))
+if x > 0 and y > 0:
+    print("point (", x, ",", y, ") lies in the First quadrant")
+elif x < 0 and y > 0:
+    print("point (", x, ",", y, ") lies in the Second quadrant")
+elif x < 0 and y < 0: 
+    print("point (", x, ",", y, ") lies in the Third quadrant")
+elif x > 0 and y < 0:
+    print("point (", x, ",", y, ") lies in the Fourth quadrant")
+elif x == 0 and y == 0:
+    print("point (", x, ",", y, ") lies at the origin")
+elif y == 0 and x != 0:
+    print("point (", x, ",", y, ") on x-axis")
+elif x == 0 and y != 0:
+    print("point (", x, ",", y, ") on at y-axis")'''
+
+# Python Program for Permutations In Which N People Can Occupy R Seats In A Classroom
+'''import math
+n,r=map(int,input().split(','))
+c=math.factorial(n)
+d=math.factorial(n-r)
+e=c//d
+print(e)'''
+
+# Number of Handshakes Program in Python[["Note:Maximum word refer to Sum" and "Minimum word refer to Subtract"]]
+'''n=int(input())
+s=0
+for i in range(1,n+1):
+  s=s+(n-i)
+print(s)
+     (or)'''
+'''n=int(input())
+c=n*(n-1)//2
+print(c)'''
+
+#
+
+
+
+# Python Program for Addition of two fractions
+'''n1, d1 = map(int, input().split(' '))
+n2, d2 = map(int, input().split(' '))
+gcd = 0
+for i in range(1, min(d1, d2) + 1):
+    if d1 % i == 0 and d2 % i == 0:
+        gcd = i 
+lcm = (d1 * d2) // gcd
+numerator = (n1 * (lcm // d1)) + (n2 * (lcm // d2))
+gcd_sum = 0
+for i in range(1, min(numerator, lcm) + 1):
+    if numerator % i == 0 and lcm % i == 0:
+        gcd_sum = i 
+sum_numerator = numerator // gcd_sum
+den = lcm // gcd_sum
+print(sum_numerator, "/", den)'''
+
+# Python Program for Replace All 0’s With 1 In A Given Integer
+'''a=input()
+c=a.replace(str(0),str(1))
+print(int(c))'''
+
+# Number be Expressed as a sum of two prime Numbers in Python
+'''n=int(input())
+li=[]
+for i in range(2,n+1):
+    flag=0
+    if n>1:
+        for j in range(2,i):
+            if i%j==0:
+                flag=1
+                break
+        if flag==0:
+            li.append(i)
+li1=[]
+for i in range(len(li)):
+    for j in range(i+1,len(li)):
+        if li[i]+li[j]==n:
+            li1.append((li[i],li[j]))
+print(' '.join(map(str,li1)))'''
+
+# Python Code to Count Possible Decoding Of A Given Digit Sequence
+'''a=input()
+n=len(a)
+c=[0]*(n+1) #initailze List
+c[0],c[1]=1,1
+for k in range(2,n+1):
+  c[k]=c[k-1]
+  if a[k-2]=='1' or(a[k-2]=='2'and a[k-1]<'7'):
+    c[k]=c[k]+c[k-2]
+print(c[n])'''
+
+# Calculating the area of circle using Python
+'''import math
+r=float(input())
+c=math.pi*r*r
+print(c)'''
+
+# Python program to find Prime Numbers between 1 to100.
+'''a=1
+b=100
+li=[]
+for i in range(a,b+1):
+  flag=0
+  if i<2:
+    flag=0
+  else:
+    for j in range(2,i):
+      if i%j==0:
+        flag=1
+        break
+    if flag==0:
+      li.append(i)
+print(li)'''
+
+# Python Program to calculate number of digits in an Integer
+'''n=input()
+a=len(n)
+print(a)'''
+
+# Python program for Converting digit/number to words
+'''num = int(input())
+ones = ["", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]  
+tens = ["", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"]  
+teens = ["ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"]  
+words = ""  
+if num == 0:  
+    words = "zero"
+else:
+    if num >= 1000:  
+        words += ones[num // 1000] + " thousand "  
+        num %= 1000  
+    
+    if num >= 100:  
+        words += ones[num // 100] + " hundred "  
+        num %= 100  
+    
+    if num >= 10 and num < 20:  
+        words += teens[num - 10] + " "  
+    else:  
+        if num >= 20:  
+            words += tens[num // 10] + " "
+            num %= 10  
+    
+        if num<=9:  
+            words += ones[num] + " "
+
+print(words.strip())'''
+
+# Python Program to count the number of days in a given month of a year
+'''month=int(input())
+year=int(input())
+if ((month==2) and (year%4==0 or (year%100==0 and year%400==0))):
+    print("No of Days is 29")
+elif month==2:
+    print("No of Days is 28")
+elif((month==1) or (month==3) or (month==5) or (month==7) or (month==8) or (month==10) or (month==12)):
+    print("No of Days is 31")
+else:
+    print("No of Days is 30")'''
+    
+# Program to count the Occurrence of a Digit in a given Number in Python
+'''from collections import Counter
+num=input()
+Digit=input()
+c=Counter(num)
+if Digit in c:
+  print(c[Digit]) # c[Index]=value ''c[0] vaue is 1 that is c[0]=1
+else:
+  print("no")'''
+  
+# Finding number of integers which has exactly x divisors
+'''a=int(input()) 
+b=int(input())
+li=[]
+for i in range(1,a+1):
+    count=0
+    for j in range(1,i+1):
+        if i%j==0:
+            count+=1
+    if count==b:
+        li.append(li)
+print(len(li))'''
+
+# Python program to find roots of a quadratic equation
+'''import math
+a=int(input())
+b=int(input())
+c=int(input())
+d=(b*b-4*a*c)
+if d>0:
+    print("roots are real and different")
+    print(-b+sqrt(d))
+    print(-b-sqrt(d))
+elif d==0:
+    print("roots are equal")
+    print(-b/(2*a))
+elif d<0:
+    print("roots are complex")
+    print(-b/(2*a))
+else:
+    print("no")'''
+
+
+    
